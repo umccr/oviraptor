@@ -13,20 +13,20 @@ build:
 
 requirements:
   build:
-    - python >=3.6
+    - python
     {% for dep in data.get("install_requires", []) -%}
     - {{ dep.lower() }}
     {% endfor %}
 
   run:
-    - python >=3.6
+    - python
     {% for dep in data.get("install_requires", []) -%}
     - {{ dep.lower() }}
     {% endfor %}
-    - snakemake-minimal
+    - snakemake-minimal ==7.30.0
     - samtools
     - sambamba
-    - mosdepth >=0.2.9
+    - mosdepth
     # - bwa
     - minimap2
     - bcftools
