@@ -1,0 +1,12 @@
+name: cbuildenv
+
+channels:
+  - conda-forge
+  - umccr
+dependencies:
+  - conda-build
+  - conda-verify
+  - anaconda-client
+  - boa
+  - umccr::versionpy
+  - pip
