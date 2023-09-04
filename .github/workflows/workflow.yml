@@ -23,7 +23,7 @@ jobs:
           mamba install pip versionpy conda-build conda-verify anaconda-client boa
 
       - name: Build package
-        run: mamba build conda/$(basename $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')
+        run: conda mambabuild conda/$(basename $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')
 
       - name: Install
         run: mamba install --use-local $(basename $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')
